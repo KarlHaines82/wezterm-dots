@@ -193,9 +193,6 @@ wezterm.on(
   end
 )
 
-
-local default_prog = { "C:/Program Files/Git/bin/bash.exe" }
-
 return {
   window_decorations           = "RESIZE",
   native_macos_fullscreen_mode = true,
