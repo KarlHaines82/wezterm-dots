@@ -16,7 +16,7 @@ local COLORS = {
 local launch_menu = {}
 
 if wezterm.target_triple == "x86_64-pc-windows-msvc" then
-  ssh_cmd = { "pwsh.exe" }
+  ssh_cmd = { "powershell.exe" }
 
   table.insert(
     launch_menu,
@@ -30,7 +30,7 @@ if wezterm.target_triple == "x86_64-pc-windows-msvc" then
     launch_menu,
     {
       label = "Git Bash Shell",
-      args = { "C:/Program Files/Git/bin/bash.exe", "-li" }
+      args = { "bash.exe", "-li" }
     }
   )
 
@@ -300,5 +300,5 @@ return {
   show_tab_index_in_tab_bar                  = true,
   adjust_window_size_when_changing_font_size = false,
   mouse_bindings                             = mouse_bindings,
-  default_prog                               = { 'bash.exe', '--login' },
+  default_prog                               = { 'bash.exe', '-li' },
 }
